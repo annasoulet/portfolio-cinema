@@ -1039,3 +1039,72 @@ a:focus {
   color: #85310c;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+/* ================= VIDÉOS PORTFOLIO ================= */
+
+.video_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.video_card {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Format vidéo 16:9 */
+.video_card iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: none;
+}
+
+/* Encadré noir sous chaque vidéo */
+.media_caption {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+/* Titre du court-métrage */
+.media_caption h4 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+/* Trois mots décrivant ton rôle */
+.media_caption p {
+  color: #bdbdbd;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  .video_grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .media_caption {
+    padding: 15px;
+  }
+
+  .media_caption h4 {
+    font-size: 16px;
+  }
+}
